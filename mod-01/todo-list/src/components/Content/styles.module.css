@@ -1,0 +1,107 @@
+.container {
+    width: 46.2rem;
+    margin: 0 auto;
+    margin-top: -1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container form {
+    width: 100%;
+
+    display: flex;
+    gap: 0.5rem;
+}
+
+.container form input {
+    flex: 1;
+    height: 3.6rem;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.container form button {
+    width: 5.6rem;
+    height: 3.6rem;
+    background: var(--blue-700);
+    border: none;
+    border-radius: 0.5rem;
+
+    color: var(--gray-100);
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container header {
+    width: 100%;
+    margin-top: 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container header span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container header span strong {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.container header span:first-child strong {
+    color: var(--blue-200);
+}
+.container header span:last-child strong {
+    color: var(--purple-200);
+}
+
+.container header span p {
+    width: 1.5rem;
+    height: 1.1rem;
+    background: var(--gray-400);
+    padding: 2px 8px 2px 8px;
+    border-radius: 999px;
+    
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gray-200);
+    text-align: center;
+}
+
+.container .list {
+    width: 100%;
+
+    margin-top: 1.5rem;
+}
+
+.container .message {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .message img {
+    margin-top: 4rem;
+}
+
+.container .message span {
+    text-align: center;
+}
