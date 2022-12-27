@@ -5,12 +5,24 @@ import checkIcon  from '../../assets/check.svg';
 
 import styles from './styles.module.css';
 
-export function Item() {
+interface ITask {
+    id: string;
+    content: string;
+    handleCheckedTask: (id: string) => void;
+    handleDeleteTask: (id: string) => void;
+}
+
+export function Task({ id, content, handleCheckedTask, handleDeleteTask }: ITask) {
 
     const [isChecked, setIsChecked] = useState(false);
 
     function handleCheckItem() {
         setIsChecked(!isChecked);
+        handleCheckedTask(id);
+    }
+
+    function handleDelete() {
+        handleDeleteTask(id);
     }
 
     return (
@@ -22,9 +34,9 @@ export function Item() {
                 }
             </div>
             
-            <p> Qualquer coisa </p>
+            <p> {content} </p>
             
-            <button>
+            <button onClick={handleDelete}>
                 <Trash size='24px' />
             </button>
         </div>
