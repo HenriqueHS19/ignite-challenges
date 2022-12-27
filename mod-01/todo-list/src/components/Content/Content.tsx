@@ -70,11 +70,6 @@ export function Content() {
         setTaskComplete(count);
     }
 
-    function handleInvalidInput(event: InvalidEvent<HTMLInputElement>) {
-        event.target.setCustomValidity('');
-        event.target.setCustomValidity('Este campo é obrigatório!');
-    }
-
     return (
         <section className={styles.container}>
             <form onSubmit={handleCreateTask}>
@@ -82,8 +77,6 @@ export function Content() {
                     placeholder='Adicione uma nova tarefa' 
                     value={newTaskText}
                     onChange={handleChangeTaskText}
-                    onInvalid={handleInvalidInput}
-                    required
                 />
 
                 <button>
